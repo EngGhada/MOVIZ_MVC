@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "681d24ca5ef7ce027c00914e"
+  },
+  "user_id": 6,
+  "user_name": "Nour",
+  "movie_id": 1,
+  "rate": 3,
+  "review": "quite good",
+  "approved": true,
+  "created_at": {
+    "$date": "2025-05-09T18:44:56.567Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681d53a85ef7ce027c009151"
+  },
+  "user_id": 6,
+  "user_name": "Nour",
+  "movie_id": 8,
+  "rate": 2,
+  "review": "goooood",
+  "approved": true,
+  "created_at": {
+    "$date": "2025-05-09T01:00:23.934Z"
+  }
+}]
