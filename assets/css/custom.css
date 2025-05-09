@@ -1,0 +1,107 @@
+/* Rating */
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate input[type="radio"] {
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate.enabled:not(:checked) > label:hover,
+.rate.enabled:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate.enabled > input:checked + label:hover,
+.rate.enabled > input:checked + label:hover ~ label,
+.rate.enabled > input:checked ~ label:hover,
+.rate.enabled > input:checked ~ label:hover ~ label,
+.rate.enabled > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+body {
+    background: linear-gradient(to right, #1c3a57, #3e5872, #5b768f);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: auto;
+    height: auto;
+    
+}
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('assets/images/logo-moviz.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100px;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+.btn-moviz {
+    background-color: #27ae60;
+    border: none;
+}
+
+.btn-moviz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #27ae60;
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* subtle white line */
+        padding-top: 40px;
+        margin-top: 60px;
+        background-color: transparent; /* assuming gradient continues */    
+
+}
+
+
+/* Remove scrollbars and background artifacts */
+ html {
+    overflow: auto;
+    height: auto;
+  }
+  
+  /* .container, .row, .col-md-8, form {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    scroll-behavior: auto !important;
+  } */
+  
+  
+
+
+
+  
