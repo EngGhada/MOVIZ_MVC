@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Repository\MovieRepository;
 
 
+
 class PageController extends Controller
 {
     public function route(): void
