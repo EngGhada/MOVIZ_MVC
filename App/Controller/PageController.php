@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controller;
+use App\Repository\MovieRepository;
 
-use App\Repository\BookRepository;
 
 class PageController extends Controller
 {
@@ -34,13 +34,19 @@ class PageController extends Controller
     Exemple d'appel depuis l'url
         ?controller=page&action=home
     */
-    protected function home()
+    protected function home() 
     {   
-
-
+        // On charge le repository
+        $movieRepository = new MovieRepository();
+        // On charge les films
+        $movies = $movieRepository->findAll();
+        // On charge l'utilisateur
+        
+         $user = $_SESSION['user'] ?? null;
+        
         $this->render('page/home', [
-            'test' => 555,
-            'nom' => "John",
+            'movies' => $movies,
+             'user' => $user
         ]);
 
     }

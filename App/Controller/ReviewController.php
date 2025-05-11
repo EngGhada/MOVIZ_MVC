@@ -81,7 +81,7 @@ class ReviewController extends Controller
     // After submission, the update method is called to save the changes
     // and redirect the user back to the movie pages
 
-    private function edit(): void 
+    private function edit(): void    
     {
         $id = $_GET['id'] ?? '';
         $movieId = $_GET['movie_id'] ?? '';

@@ -227,7 +227,7 @@ class MovieController extends Controller
 
                 $imageName = $movie->getImageName(); // default to existing
                 if (!empty($_FILES['image']['name'])) {
-                    $uploadResult = \App\Tools\FileTools::uploadImage('/uploads/movies/', $_FILES['image'],$imageName);
+                      $uploadResult = \App\Tools\FileTools::uploadImage('/uploads/movies/', $_FILES['image'],$imageName);
                     if (!empty($uploadResult['errors'])) {
                         throw new \Exception(implode(', ', $uploadResult['errors']));
                     }
@@ -247,7 +247,6 @@ class MovieController extends Controller
                 foreach ($directorIds as $directorId) {
                     $directorRepo->linkDirectorToMovie($movieId, (int)$directorId);
                 }
-
                 header("Location: index.php?controller=movie&action=show&id=" . $movieId);
                 exit;
             }

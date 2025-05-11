@@ -88,7 +88,12 @@ class MovieRepository extends Repository
 
     public function update(int $id, string $title, string $synopsis, string $releaseDate, string $duration, string $imageName): bool
     {
-        $query = $this->pdo->prepare("UPDATE movie SET title = :title, synopsis = :synopsis, release_date = :release_date, duration = :duration, image_name = :image_name  WHERE id = :id");
+        $query = $this->pdo->prepare("UPDATE movie SET title = :title,
+                                                       synopsis = :synopsis,
+                                                       release_date = :release_date,
+                                                       duration = :duration,
+                                                       image_name = :image_name 
+                                                        WHERE id = :id");
 
         $query->bindValue(':id', $id, \PDO::PARAM_INT);
         $query->bindValue(':title', $title, \PDO::PARAM_STR);

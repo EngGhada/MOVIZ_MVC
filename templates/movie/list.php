@@ -13,11 +13,9 @@
                     <a href="index.php?controller=movie&action=show&id=<?= $movie->getId() ?>" class="btn btn-primary">Voir la fiche</a>
                 </div>
             </div>
-
         </div>
+        
     <?php } ?>
 </div>
-
-
 
 <?php require_once _ROOTPATH_ . '/templates/footer.php'; ?>

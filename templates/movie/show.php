@@ -61,7 +61,6 @@ use App\Entity\Movie;
             
             <?php foreach ($reviews as $review): ?>
 
-           
                 <?php if (isset($editReview) && $editReview['_id'] == $review['_id']): ?>
                         <!-- Inline Edit Form -->
                 <form method="POST" action="index.php?controller=review&action=update">
@@ -101,10 +100,10 @@ use App\Entity\Movie;
                             <span class="badge bg-success">⭐ <?=$review['rate'] ?>/5</span>
 
                             <?php if (isset($_SESSION['user'])&&$_SESSION['user']['id'] === $review['user_id']) : ?>
-                                <a href="index.php?controller=review&action=edit&id=<?= $review['_id'] ?>&movie_id=<?= $movie->getId() ?>" class="btn btn-sm btn-outline-secondary">✏️ Modifier</a>
 
-                                
+                                <a href="index.php?controller=review&action=edit&id=<?= $review['_id'] ?>&movie_id=<?= $movie->getId() ?>" class="btn btn-sm btn-outline-secondary">✏️ Modifier</a>                                
                                 <a href="index.php?controller=review&action=delete&id=<?= $review['_id'] ?>&movie_id=<?= $movie->getId() ?>" onclick="return confirm('Supprimer cet avis ?')" class="btn btn-sm btn-outline-danger">🗑️ Supprimer</a>
+                           
                             <?php endif; ?>
                         </div>
 
